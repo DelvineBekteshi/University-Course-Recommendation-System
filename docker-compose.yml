@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  # Shërbimi i Databazës Kryesore (PostgreSQL)
+  db:
+    image: postgres:15
+    container_name: spdd_postgres
+    environment:
+      POSTGRES_USER: user_admin
+      POSTGRES_PASSWORD: password123 # Këto do t'i kalojmë në .env më vonë për Siguri
+      POSTGRES_DB: university_recommendations
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql # Krijimi automatik i tabelave
+
+  # Shërbimi për Caching dhe Performancë (Redis)
+  cache:
+    image: redis:7-alpine
+    container_name: spdd_redis
+    ports:
+      - "6379:6379"
+
+  # Aplikacioni Flask (API)
+  app:
+    build: .
+    container_name: spdd_flask_app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+      - cache
