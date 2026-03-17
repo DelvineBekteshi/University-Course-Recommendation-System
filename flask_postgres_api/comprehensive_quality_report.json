@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-03-16T23:14:52.878998",
+  "tables_checked": [
+    {
+      "table_name": "courses",
+      "error": "(psycopg2.OperationalError) connection to server at \"localhost\" (::1), port 5432 failed: Connection refused (0x0000274D/10061)\n\tIs the server running on that host and accepting TCP/IP connections?\nconnection to server at \"localhost\" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)\n\tIs the server running on that host and accepting TCP/IP connections?\n\n(Background on this error at: https://sqlalche.me/e/20/e3q8)"
+    },
+    {
+      "table_name": "users",
+      "error": "(psycopg2.OperationalError) connection to server at \"localhost\" (::1), port 5432 failed: Connection refused (0x0000274D/10061)\n\tIs the server running on that host and accepting TCP/IP connections?\nconnection to server at \"localhost\" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)\n\tIs the server running on that host and accepting TCP/IP connections?\n\n(Background on this error at: https://sqlalche.me/e/20/e3q8)"
+    }
+  ],
+  "overall_quality_score": 0.0
+}

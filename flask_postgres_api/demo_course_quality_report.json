@@ -1,0 +1,105 @@
+{
+  "timestamp": "2026-03-17T00:18:08.568190",
+  "table_name": "courses",
+  "total_rows": 6,
+  "validations": [
+    {
+      "name": "title_not_null",
+      "description": "Title cannot be null or empty",
+      "severity": "critical",
+      "total_rows": 6,
+      "passed_rows": 5,
+      "failed_rows": 1,
+      "failure_rate": 16.666666666666664,
+      "failed_examples": [
+        {
+          "row_index": 5,
+          "failed_value": 6
+        }
+      ]
+    },
+    {
+      "name": "title_length",
+      "description": "Title must be 3-255 characters",
+      "severity": "critical",
+      "total_rows": 6,
+      "passed_rows": 5,
+      "failed_rows": 1,
+      "failure_rate": 16.666666666666664,
+      "failed_examples": [
+        {
+          "row_index": 5,
+          "failed_value": 6
+        }
+      ]
+    },
+    {
+      "name": "category_not_null",
+      "description": "Category cannot be null",
+      "severity": "critical",
+      "total_rows": 6,
+      "passed_rows": 6,
+      "failed_rows": 0,
+      "failure_rate": 0.0,
+      "failed_examples": []
+    },
+    {
+      "name": "category_valid",
+      "description": "Category must be from allowed list",
+      "severity": "warning",
+      "total_rows": 6,
+      "passed_rows": 5,
+      "failed_rows": 1,
+      "failure_rate": 16.666666666666664,
+      "failed_examples": [
+        {
+          "row_index": 5,
+          "failed_value": 6
+        }
+      ]
+    },
+    {
+      "name": "description_not_null",
+      "description": "Description cannot be null or empty",
+      "severity": "critical",
+      "total_rows": 6,
+      "passed_rows": 6,
+      "failed_rows": 0,
+      "failure_rate": 0.0,
+      "failed_examples": []
+    },
+    {
+      "name": "description_length",
+      "description": "Description must be at least 10 characters",
+      "severity": "warning",
+      "total_rows": 6,
+      "passed_rows": 5,
+      "failed_rows": 1,
+      "failure_rate": 16.666666666666664,
+      "failed_examples": [
+        {
+          "row_index": 5,
+          "failed_value": 6
+        }
+      ]
+    },
+    {
+      "name": "is_deleted_boolean",
+      "description": "is_deleted must be boolean",
+      "severity": "warning",
+      "total_rows": 6,
+      "passed_rows": 6,
+      "failed_rows": 0,
+      "failure_rate": 0.0,
+      "failed_examples": []
+    }
+  ],
+  "summary": {
+    "total_checks": 7,
+    "passed_checks": 3,
+    "failed_checks": 4,
+    "critical_failures": 2,
+    "warning_failures": 2
+  },
+  "quality_score": 90.47619047619048
+}

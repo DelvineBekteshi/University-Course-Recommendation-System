@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-03-17T00:18:08.590414",
+  "table_name": "users",
+  "total_rows": 4,
+  "validations": [
+    {
+      "name": "email_not_null",
+      "description": "Email cannot be null or empty",
+      "severity": "critical",
+      "total_rows": 4,
+      "passed_rows": 4,
+      "failed_rows": 0,
+      "failure_rate": 0.0,
+      "failed_examples": []
+    },
+    {
+      "name": "email_format",
+      "description": "Email must contain @ and .",
+      "severity": "critical",
+      "total_rows": 4,
+      "passed_rows": 3,
+      "failed_rows": 1,
+      "failure_rate": 25.0,
+      "failed_examples": [
+        {
+          "row_index": 3,
+          "failed_value": 4
+        }
+      ]
+    },
+    {
+      "name": "name_not_null",
+      "description": "Name cannot be null or empty",
+      "severity": "critical",
+      "total_rows": 4,
+      "passed_rows": 4,
+      "failed_rows": 0,
+      "failure_rate": 0.0,
+      "failed_examples": []
+    },
+    {
+      "name": "last_name_not_null",
+      "description": "Last name cannot be null or empty",
+      "severity": "critical",
+      "total_rows": 4,
+      "passed_rows": 4,
+      "failed_rows": 0,
+      "failure_rate": 0.0,
+      "failed_examples": []
+    },
+    {
+      "name": "role_valid",
+      "description": "Role must be student, admin, or instructor",
+      "severity": "warning",
+      "total_rows": 4,
+      "passed_rows": 3,
+      "failed_rows": 1,
+      "failure_rate": 25.0,
+      "failed_examples": [
+        {
+          "row_index": 3,
+          "failed_value": 4
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_checks": 5,
+    "passed_checks": 3,
+    "failed_checks": 2,
+    "critical_failures": 1,
+    "warning_failures": 1
+  },
+  "quality_score": 90.0
+}
